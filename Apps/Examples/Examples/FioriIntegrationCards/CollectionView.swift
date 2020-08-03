@@ -70,7 +70,6 @@ struct CollectionView<Elements, Content>: View where Elements: RandomAccessColle
     
     private func bodyHelper(containerSize: CGSize, offsets: [Elements.Element.ID: CGSize]) -> some View {
         
-        print(offsets)
         return ZStack(alignment: .topLeading) {
             ForEach(data) {
                 PropagateSize(content: self.content($0), id: $0.id)
